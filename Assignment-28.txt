@@ -1,0 +1,62 @@
+#Question:1 Create a table (student) with 3 columns (rollno, name, course).
+create table Student(
+ 	Roll_no INT NOT NULL PRIMARY KEY,
+ 	Name TEXT,
+	Course Text
+);
+
+#Question:2 Insert records for 4 students.
+Insert into student values(1,'Shriya','B.Tech')
+Insert into student values(2,'Sidd','M.Tech')
+Insert into student values(3,'Pragati','BBA')
+Insert into student values(4,'RK','PHD')
+
+#Question:3 Write a Select query to fetch all the students.
+Select * from Student 
+
+#Question:4 Update the student name of rollno 3 with ‘Mohan'
+update student set Name = 'Mohan' where Roll_no = 03
+ 
+#Question:5 Delete any student from table with their rollno.
+Delete from student where Roll_no = 02
+
+#Question:6 Delete all the data from student table.
+TRUNCATE table student
+
+#Question:7 Drop the student table.
+DROP table student
+
+#Question:8 Create Courses table (cid, cname) where cid is a primary key and Student table
+(rollno, name, cid) where rollno is a primary key and cid is a foreign key.
+
+create table course(
+        cid INT NOT NULL PRIMARY KEY,
+	cname TEXT	
+);
+
+create table student(
+	Roll_no int NOT NULL,
+	name TEXT,
+ 	cid int not null,
+        PRIMARY KEY(Roll_no), 
+	CONSTRAINT fk_course foreign key(cid) references course(cid)
+);
+
+#Question:9 Insert data in both the tables.
+INSERT INTO course VALUES(101,'C');
+INSERT INTO course VALUES(102,'java');
+INSERT INTO course VALUES(103,'C++');
+INSERT INTO course VALUES(104,'python');
+INSERT INTO course VALUES(105,'javascript');
+INSERT INTO course VALUES(106,'Cobol');
+
+INSERT INTO student VALUES(1,'Shriya',104);
+INSERT INTO student VALUES(2,'Rk',102);
+INSERT INTO student VALUES(3,'Pragati',105);
+INSERT INTO student VALUES(4,'Siddhartha',104);
+INSERT INTO student VALUES(5,'Harshitha',106);
+INSERT INTO student VALUES(6,'Anamika',103);
+
+#Question:10 Select all the students who are doing a specific course, eg. Python
+select name from student where cid = 104
+
