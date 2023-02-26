@@ -65,6 +65,6 @@ list1 = []
 while n!= 0:
     list1.append(n%10)
     n = n//10
+list1.reverse()  
 print("Output of Question10: ")    
-for x in list1:
-    print(x,end = ' ')
+print(list1)
