@@ -38,8 +38,8 @@ print(secondlist)
 
 #Question 7:  Write a python program to Print all items by referring to their index number (thislist = ["Java", "SQL", "C", "Reactnative", "Javascript", "Python"]
 thislist = ["Java","SQL","C","Reactnative","Javascript","Pyhton"]
-for i in thislist:
-    print(i,end = ' ')
+for i in range(len(thislist)):
+    print(thislist[i],end = ' ')
 print("Output of Question7: ")    
 print()    
 
