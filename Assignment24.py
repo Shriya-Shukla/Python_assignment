@@ -136,15 +136,23 @@ s2.Show()
 s3.Show()
 
 #10. Define a class Employee with instance object variables empid, name, salary. Write__init__() method in the class to initialize instance object variables. Also define instance methods to input fields and display field value
-class Employee:
-    def __init__(self):    
-        self.Emp_Id = int(input("Enter Employee Id: "))
-        self.Emp_Name = input("Enter Name: ")
-        self.Salary = float(input("Enter Salary: "))
-    def Show(self):     
-        print("Details of Employee:",self.Emp_Id,self.Emp_Name,self.Salary)    
-    
-e1 = Employee()
-e1.Show()
-e2 = Employee()
-e2.Show()
+class employee:
+    def __init__(self):
+       pass 
+
+    @classmethod
+    def input(cls):
+        cls.empid = int(input("enter empid"))
+        cls.name = input("enter name")
+        cls.salary= int(input("enter salary"))
+
+    def show(self):
+        print(self.empid)    
+        print(self.name)
+        print(self.salary)
+e1 = employee() 
+e2 = employee()
+e1.input() 
+e1.show()  
+e2.input()
+e2.show() 
