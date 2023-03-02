@@ -100,25 +100,24 @@ l2.Show_config()
 l3.Show_config()
 
 #8. WRT 7th Question, create 3 Laptop objects and add them to the list in the sorted order based on the ram size.
-#need to look this
 class Laptop:
-    def __init__(self,Brand,Ram,Cpu,Hdd):
-        self.Brand = Brand
-        self.Ram = Ram
-        self.Cpu = Cpu
-        self.Hdd = Hdd
+    list = []
+    def __init__(self,B,R,C,H):
+        self.Brand = B
+        self.Ram = R
+        self.Cpu = C
+        self.Hdd = H
+        Laptop.list.append(self.Ram)
+
     def Show_config(self):
         print("The Attributes of Laptop",self.Brand,self.Ram,self.Cpu,self.Hdd)
-    def SortRam(self,list1):
-        list1.sort()
-l1 = Laptop("HP",16,"i9",4)
+l1 = Laptop("HP",64,"i9",4)
 l2 = Laptop("DELL",32,"i10",6)
 l3 = Laptop("ACER",16,"i7",8)
-list1 = [l1,l2,l3]
 l1.Show_config()
 l2.Show_config()
 l3.Show_config()
-#Laptop.SortRam(list1)
+print(sorted(Laptop.list))
 
 #9. Write a python program to create a School class and 3 instance variables and 1 class variable.
 class Student:
